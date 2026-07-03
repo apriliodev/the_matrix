@@ -38,5 +38,6 @@ def show_interpret() -> None:
         print(r"matrix_env\Scripts\activate # On Windows")
         print("\nThen run this program again.")
 
-show_interpret()
+if __name__ == "__main__":
+    show_interpret()
         
