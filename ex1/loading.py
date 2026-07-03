@@ -61,12 +61,14 @@ def analyze_data(data: "np.darray") -> "pd.DataFrame":
     print(f"Processing {len(df)} data points...")
     return df
 
+
 def visualize(df: "pd.DataFrame") -> None:
     print("Generating visualization...")
     plt.hist(df["value"], bins=30)
     plt.title("Matrix Data Analysis")
     plt.savefig("matrix_analysis.png")
     print("Results saved to: matrix_analysis.png")
+
 
 def loading() -> None:
     print("LOADING STATUS: Loading programs...\n")

@@ -5,8 +5,9 @@ import site
 
 def check_venv() -> bool:
     if sys.prefix != sys.base_prefix:
-        return True # on est dans un venv
+        return True  # on est dans un venv
     return False
+
 
 def show_interpret() -> None:
     if check_venv():
@@ -38,6 +39,6 @@ def show_interpret() -> None:
         print(r"matrix_env\Scripts\activate # On Windows")
         print("\nThen run this program again.")
 
+
 if __name__ == "__main__":
     show_interpret()
-        
