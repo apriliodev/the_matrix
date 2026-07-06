@@ -30,21 +30,25 @@ def check_dependencies() -> bool:
 
     if pd is not None:
         print(
-            f"[OK] pandas ({get_version('pandas')}) - Data manipulation ready")
+            f"[OK] pandas ({get_version('pandas')}) - "
+            "Data manipulation ready")
     else:
         print("[MISSING] pandas - run: pip install pandas")
         all_ok = False
 
     if np is not None:
         print(
-            f"[OK] numpy ({get_version('numpy')}) - Numerical computation ready")
+            f"[OK] numpy ({get_version('numpy')})"
+            " - Numerical computation ready"
+        )
     else:
         print("[MISSING] numpy - run: pip install numpy")
         all_ok = False
 
     if matplotlib is not None:
         print(
-            f"[OK] matplotlib ({get_version('matplotlib')}) - Visualization ready")
+            f"[OK] matplotlib ({get_version('matplotlib')})"
+            " - Visualization ready")
     else:
         print("[MISSING] matplotlib - run: pip install matplotlib")
         all_ok = False

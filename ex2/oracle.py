@@ -16,7 +16,8 @@ def security_check() -> None:
         if ".env" in gitignore_content:
             print("[OK] No hardcoded secrets detected (.env is gitignored)")
         else:
-            print("[WARNING] .env is not in .gitignore — risk of leaking secrets")
+            print("[WARNING] .env is not in .gitignore — "
+                  "risk of leaking secrets")
     else:
         print("[WARNING] No .gitignore found")
     print("[OK] Production overrides available (system env > .env file)")
@@ -53,7 +54,8 @@ def show_status(config: dict[str, str]) -> None:
         print(f"Log Level: {config['LOG_LEVEL']} (verbose, development)")
 
     print(
-        f"API Access: {'Authenticated' if config['API_KEY'] else 'Missing key'}")
+        "API Access: "
+        f"{'Authenticated' if config['API_KEY'] else 'Missing key'}")
     print(f"Zion Network: {config['ZION_ENDPOINT'] or 'Not configured'}")
 
 
